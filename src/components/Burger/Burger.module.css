@@ -1,0 +1,45 @@
+/* mobile layout */
+.Burger{ 
+    width: 90%;
+    margin: auto;
+    height: 250px;
+    overflow: scroll;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.NoIngredients{
+    font-weight: bold;
+}
+
+
+@media (max-width: 349px){ /* 349 or below */
+    .Burger{
+        width: 350px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 350px){
+    .Burger{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 500px){
+    .Burger{
+        width: 450px;
+        height: 400px;
+    }
+}
+
+/* if width is 1000px or more AND height is 700px or more */
+@media (min-width: 1000px){
+    .Burger{
+        width: 700px;
+        height: 600px;
+    }
+}
+
