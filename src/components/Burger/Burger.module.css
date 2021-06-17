@@ -14,14 +14,14 @@
 }
 
 
-@media (max-width: 349px){ /* 349 or below */
+@media (max-width: 384px){ /* 384 or below */
     .Burger{
         width: 350px;
         height: 400px;
     }
 }
 
-@media (min-width: 350px){
+@media (min-width: 385px){
     .Burger{
         width: 400px;
         height: 400px;
@@ -38,8 +38,8 @@
 /* if width is 1000px or more AND height is 700px or more */
 @media (min-width: 1000px){
     .Burger{
-        width: 700px;
-        height: 600px;
+        width: 600px;
+        height: 500px;
     }
 }
 

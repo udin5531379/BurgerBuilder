@@ -8,7 +8,7 @@ class BurgerIngredient extends Component{
     render() {
         let ingredient = null
 
-    switch(this.props.type) {
+    switch(this.props.type) { //type is the property that this expects
         case('bread-bottom'):
             ingredient = <div className = {classes.BreadBottom}></div>
             break;
