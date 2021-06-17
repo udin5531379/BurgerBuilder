@@ -1,0 +1,14 @@
+.TotalPrice{
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    flex-flow: column;
+    align-items: flex-end;
+    font-size: 30px;
+}
+
+@media(min-width: 700px){
+    .TotalPrice{
+        max-width: 800px;
+    }
+}

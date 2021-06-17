@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Aux from '../../hoc/Aux';
 import Burger  from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
+import classes from "../BurgerBuilder/BurgerBuilder.module.css";
 
 //GLOBAL_VARIABLE
 const INGREDIENT_PRICES = {
@@ -37,11 +38,28 @@ class BurgerBuilder extends Component {
         this.setState({ingredients: updatedIngredient, totalPrice: updatedPrice})
     }
 
+    removeIngredientsHandler = (type) => {
+        console.log("Current Price", this.state.currentPrice);
+        if (this.state.ingredients[type] > 0) {
+            const updatedIngredientCount = this.state.ingredients[type] - 1
+            const updatedIngredient = {
+                ...this.state.ingredients
+            }
+            updatedIngredient[type] = updatedIngredientCount
+
+            const currentPrice = this.state.totalPrice - INGREDIENT_PRICES[type]
+            console.log("Updated Price",currentPrice)
+
+            this.setState({ingredients: updatedIngredient, totalPrice: currentPrice})
+        }
+    }
+
     render(){
         return(
             <Aux>
                 <Burger ingredients = {this.state.ingredients}/>
-                <BuildControls ingredientAdded = {this.addIngredientsHandler}/>
+                <BuildControls ingredientAdded = {this.addIngredientsHandler} ingredientRemoved = {this.removeIngredientsHandler}/>
+                <div className={classes.TotalPrice} >Total Price: {this.state.totalPrice}$</div>
             </Aux>
         );
     }
