@@ -55,10 +55,22 @@ class BurgerBuilder extends Component {
     }
 
     render(){
+
+        const disabledInfo = {
+            ...this.state.ingredients //immutable way ma naya object create garyo 
+        }
+        for(let key in disabledInfo){
+            disabledInfo[key] = disabledInfo[key] <= 0
+        }
         return(
             <Aux>
                 <Burger ingredients = {this.state.ingredients}/>
-                <BuildControls ingredientAdded = {this.addIngredientsHandler} ingredientRemoved = {this.removeIngredientsHandler}/>
+
+                <BuildControls 
+                ingredientAdded = {this.addIngredientsHandler} 
+                ingredientRemoved = {this.removeIngredientsHandler}
+                disable = {disabledInfo}/>
+
                 <div className={classes.TotalPrice} >Total Price: {this.state.totalPrice}$</div>
             </Aux>
         );

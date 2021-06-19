@@ -18,7 +18,7 @@ const buildContols = (props) => (
                     label={eachControls.label} 
                     added={() => props.ingredientAdded(eachControls.type)}
                     removed={() => props.ingredientRemoved(eachControls.type)}
-                />
+                    disable = {props.disable[eachControls.type]}/>
             ))}
         </div>
     )
