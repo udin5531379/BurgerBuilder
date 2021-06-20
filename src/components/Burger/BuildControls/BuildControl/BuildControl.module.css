@@ -13,14 +13,13 @@
     font: inherit;
     cursor: pointer;
     outline: none;
-    background:linear-gradient(to bottom, #ffbb0f 5%, #ad8111 100%);
-	background-color:#ffbb0f;
+    border: none;
+    background: #F3EAC0;
+	background-color:#DC9750;
 	border-radius:12px;
-	border:1px solid #ffffff;
-	color:#ead3a5;
+	color:white;
 	font-size:17px;
 	padding:11px 25px;
-	text-shadow:0px 1px 0px #a68a19;
     opacity: 1;
     transition: all .2s ease-in-out;
 }
