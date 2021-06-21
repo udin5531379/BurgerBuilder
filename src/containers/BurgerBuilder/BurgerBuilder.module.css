@@ -31,10 +31,26 @@
     opacity: 0.8;
 }
 
-/* hover animation only when the button is active */
-.TotalPriceOrderNowButton button:hover:not([disabled]){ 
-    transform: scale(1.1);
+.TotalPriceOrderNowButton button:not([disabled]){
+    animation: bounce .3s normal forwards ease-out;
 }
+
+.TotalPriceOrderNowButton button:active{
+    transform: translateY(1px) !important;
+}
+
+/* hover animation only when the button is active */
+/* .TotalPriceOrderNowButton button:hover:not([disabled]){ 
+    transform: scale(1.1) !important; 
+ } */
+
+@keyframes bounce {
+    0% { transform: scale(1.1); }
+    
+    50% { transform: scale(1.2); }
+
+    100% { transform: scale(1); }
+  }
 
 @media(min-width: 700px){
     .TotalPriceOrderNowButton{
