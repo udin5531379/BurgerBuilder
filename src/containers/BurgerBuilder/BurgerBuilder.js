@@ -3,6 +3,7 @@ import Aux from '../../hoc/Aux';
 import Burger  from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import classes from "../BurgerBuilder/BurgerBuilder.module.css";
+import Modal from "../../components/Modal/Modal";
 
 //GLOBAL_VARIABLE
 const INGREDIENT_PRICES = {
@@ -78,6 +79,8 @@ class BurgerBuilder extends Component {
         return(
             <Aux>
                 <Burger ingredients = {this.state.ingredients}/>
+
+                <Modal ingredientsFromBurgerBuilder = {this.state.ingredients}/>
 
                 <BuildControls 
                 ingredientAdded = {this.addIngredientsHandler} 
