@@ -6,7 +6,7 @@ const orderSummary = (props) => {
     const orderSummaryList = Object.keys(props.ingredientsFromModal).map((eachIngredients) => {
         return(
             <li key={eachIngredients} className={classes.li}>
-                <span>{eachIngredients}</span>: {props.ingredientsFromModal[eachIngredients]}
+                <span className={classes.span}>{eachIngredients}</span>: {props.ingredientsFromModal[eachIngredients]}
             </li>
         ) 
     })

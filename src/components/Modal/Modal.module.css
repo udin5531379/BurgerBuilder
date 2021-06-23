@@ -7,21 +7,30 @@
     position: absolute;
     left: 0;
     right:0;
-    top: 50%; 
-    -webkit-transform:translateY(-50%);
+    top: 40%; 
+    border: solid 1px black;
+    /* -webkit-transform:translateY(-50%);
     -moz-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
-    transform:translateY(-50%);
-    background-color: red;
+    transform:translateY(-50%); */
+    border-radius: 10px;
+    background-color: #FFEFD5;
+    animation: fadeIn .2s;
 }
 
-.Modal h2{
-    padding: 10px;
-    margin: 0;
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-.Modal ul{
-    margin: 0;
-    padding-bottom: 10px;
-}

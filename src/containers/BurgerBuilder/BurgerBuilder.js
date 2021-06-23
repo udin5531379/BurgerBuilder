@@ -23,7 +23,8 @@ class BurgerBuilder extends Component {
             meat: 0
         },
         totalPrice : 4,
-        orderNowButtonEnableOrDisableState: false
+        orderNowButtonEnableOrDisableState: false,
+        modalShow: false
     }
 
     updateOrderNowButtonState = (burgerComponents) => {
@@ -68,6 +69,10 @@ class BurgerBuilder extends Component {
         }
     }
 
+    orderSummaryShownOrNotShown = () => {
+        this.setState({modalShow: true})
+    }
+
     render(){
 
         const disabledInfo = {
@@ -80,7 +85,10 @@ class BurgerBuilder extends Component {
             <Aux>
                 <Burger ingredients = {this.state.ingredients}/>
 
-                <Modal ingredientsFromBurgerBuilder = {this.state.ingredients}/>
+                <Modal 
+                ingredientsFromBurgerBuilder = {this.state.ingredients}
+                modalStateFromBurgerBuilder = {this.state.modalShow}
+                />
 
                 <BuildControls 
                 ingredientAdded = {this.addIngredientsHandler} 
@@ -89,7 +97,7 @@ class BurgerBuilder extends Component {
 
                 <div className={classes.TotalPriceOrderNowButton} >
                     Total Price: {this.state.totalPrice}$
-                    <button disabled={!this.state.orderNowButtonEnableOrDisableState}>Order Now!</button>
+                    <button onClick={this.orderSummaryShownOrNotShown} disabled={!this.state.orderNowButtonEnableOrDisableState}>Order Now!</button>
                 </div>
             </Aux>
         );
