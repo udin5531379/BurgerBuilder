@@ -1,6 +1,11 @@
 import React from 'react';
 import classes from '../BuildControls/BuildControls.module.css';
 import BuildControl from './BuildControl/BuildControl';
+// import cheese from '../../../Images/cheese.png'
+// import lettuce from '../../../Images/lettuce.png'
+// import meat from '../../../Images/meat.png'
+// import bacon from '../../../Images/bacon.png'
+
 
 const controls = [
     {label: 'Chesee', type: 'cheese'},
@@ -8,6 +13,7 @@ const controls = [
     {label: 'Meat', type: 'meat'},
     {label: 'Salad', type: 'salad'}
 ]
+
     
 
 const buildContols = (props) => (
@@ -18,8 +24,10 @@ const buildContols = (props) => (
                     label={eachControls.label} 
                     added={() => props.ingredientAdded(eachControls.type)}
                     removed={() => props.ingredientRemoved(eachControls.type)}
-                    disable = {props.disable[eachControls.type]}/>
+                    disable = {props.disable[eachControls.type]}
+                    />
             ))}
+            
         </div>
     )
 

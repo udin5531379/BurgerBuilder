@@ -5,11 +5,11 @@ import Aux from '../../hoc/Aux'
 import Backdrop from '../../components/Modal/Backdrop/Backdrop'
 
 const modal = (props) => (
-    <Aux>
+    <div>
         <Backdrop isBackgroundForModalShown = {props.modalStateFromBurgerBuilder} modelStateHide = {props.modalStateHideFromBurgerBuilder}/>
         <div className={classes.Modal} style={{display: props.modalStateFromBurgerBuilder ? 'table' : 'none'}}>
             <OrderSummary ingredientsFromModal={props.ingredientsFromBurgerBuilder}/>
         </div>
-    </Aux>
+    </div>
 ) 
 export default modal;

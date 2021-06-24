@@ -5,6 +5,8 @@ import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import classes from "../BurgerBuilder/BurgerBuilder.module.css";
 import Modal from "../../components/Modal/Modal";
 
+
+
 //GLOBAL_VARIABLE
 const INGREDIENT_PRICES = {
     salad: 1,

@@ -15,3 +15,14 @@
 .span{
     text-transform: capitalize;
 }
+
+.imagesAndCount{
+    display: flex;
+    align-items: center;
+}
+
+.align{
+    flex: 1;
+    font-size: 30px;
+}
+
