@@ -100,6 +100,7 @@ class BurgerBuilder extends Component {
                 modalStateFromBurgerBuilder = {this.state.modalShow}
                 modalStateHideFromBurgerBuilder = {this.orderSummaryHide}
                 purchaseContinue = {this.purchaseContinueHandler}
+                totalPrice = {this.state.totalPrice}
                 />
                 
 

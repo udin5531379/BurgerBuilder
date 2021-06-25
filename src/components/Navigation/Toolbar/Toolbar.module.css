@@ -1,0 +1,40 @@
+.all {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10%; /*top and left 30px and 10% on the bottom and right*/
+    position: fixed;
+    width: 100%;
+}
+
+.all img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+li, a, p{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #0088a9;
+}

@@ -27,6 +27,7 @@
 }
 
 .ContinueAndCancelButton{
+    margin-top: -15px;
     display: flex;
     flex-direction: row-reverse;
     align-items: right;

@@ -10,7 +10,8 @@ const modal = (props) => (
         <div className={classes.Modal} style={{display: props.modalStateFromBurgerBuilder ? 'table' : 'none'}}>
             <OrderSummary ingredientsFromModal={props.ingredientsFromBurgerBuilder}
                 modalDismiss = {props.modalStateHideFromBurgerBuilder}
-                purchaseContinue = {props.purchaseContinue}/>
+                purchaseContinue = {props.purchaseContinue}
+                totalPrice={props.totalPrice}/>
         </div>
     </Aux>
 ) 

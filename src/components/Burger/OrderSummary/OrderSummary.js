@@ -56,6 +56,7 @@ const orderSummary = (props) => {
             <ul className={classes.ul}>
                 {orderSummaryList}
             </ul>
+            <h1 className={classes.ContinueAndCancelButton}>Total: {props.totalPrice}$</h1>
             <div className={classes.ContinueAndCancelButton}>
                 <CustomButton className={classes.align} btnType={"Success"} clicked={props.purchaseContinue}>CONTINUE</CustomButton>
                 <CustomButton className={classes.align} btnType={"Danger"} clicked={props.modalDismiss}>CANCEL</CustomButton>
