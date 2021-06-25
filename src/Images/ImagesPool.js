@@ -1,4 +1,3 @@
-import React from 'react';
 
 const imagesPool = [
   { src: './Images/bacon.png', type: 'bacon'},
