@@ -4,7 +4,9 @@ import classes from '../Toolbar/Toolbar.module.css'
 const navigationItems = (props) => {
     return (
         <ul className = {classes.nav__links}>
-            <li><a href={props.href} className={props.active ? classes.active : null}>{props.children}</a></li>
+                <li>
+                    <a href = {props.href}  className={[props.active ? classes.active : null, props.sidebar ? classes.fontColorAndMarginForSideBar : classes.fontColorForToolBar].join(' ')}>{props.children}</a>
+                </li>
         </ul>
     )
 }

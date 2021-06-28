@@ -6,7 +6,6 @@ import classes from "../BurgerBuilder/BurgerBuilder.module.css";
 import Modal from "../../components/Modal/Modal";
 
 
-
 //GLOBAL_VARIABLE
 const INGREDIENT_PRICES = {
     salad: 1,
@@ -14,7 +13,6 @@ const INGREDIENT_PRICES = {
     meat: 2,
     bacon: 3
 }
-
 
 class BurgerBuilder extends Component {
     state = {
@@ -26,7 +24,7 @@ class BurgerBuilder extends Component {
         },
         totalPrice : 4,
         orderNowButtonEnableOrDisableState: false,
-        modalShow: false
+        modalShow: false,
     }
 
     updateOrderNowButtonState = (burgerComponents) => {
@@ -83,6 +81,7 @@ class BurgerBuilder extends Component {
         alert("Thanks for Ordering our delicious Burger! Enjoy!!")
     }
 
+    
     render(){
 
         const disabledInfo = {
