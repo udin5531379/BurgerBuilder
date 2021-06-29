@@ -12,14 +12,20 @@ class Layout extends Component{
     }
     
     sideDrawerShowState = () => {
-        this.setState({sideDrawerShow: true})
+        this.setState({sideDrawerShow: !true})
+    }
+
+    sideBarToggler = () => {
+        this.setState((previousState) => {
+            return ({sideDrawerShow : !previousState.sideDrawerShow})
+        })
     }
 
     render() {
         return(
             <Aux>
-                <Toolbar sideDrawerShown = {this.sideDrawerShowState}/>
-                <SideDrawer/>
+                <Toolbar hamBurgerToggler = {this.sideBarToggler} />
+                <SideDrawer open = {this.state.sideDrawerShow} modelStateHideFromLayoutComponent = {this.sideDrawerShowState}/>
                 <div className = {classes.Content}>
                     {this.props.children}
                 </div>

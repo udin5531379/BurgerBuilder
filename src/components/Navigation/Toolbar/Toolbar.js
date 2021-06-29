@@ -2,7 +2,7 @@ import React from "react";
 import classes from './Toolbar.module.css';
 import NavigationItems from '../NavigationItems/NavigationItems'
 import SideDrawer from "../SideDrawer/SideDrawer";
-import classes1 from '../../Navigation/SideDrawer/SideDrawer.module.css'
+
 
 const toolbar = (props) => {
     return(
@@ -17,8 +17,8 @@ const toolbar = (props) => {
                 <p>Happy Eating!</p>
                 <SideDrawer/>
                 </header>
-                <div className = {classes.burgerDiv}>
-                    <div className={classes.burger} onClick={props.sideDrawerShown ? classes1.Open : classes1.Close} >
+                <div className = {classes.burgerDiv} onClick = {() => props.hamBurgerToggler()}>
+                    <div className={classes.burger}>
                         <div className={classes.line1}></div>
                         <div className={classes.line2}></div>
                         <div className={classes.line3}></div>

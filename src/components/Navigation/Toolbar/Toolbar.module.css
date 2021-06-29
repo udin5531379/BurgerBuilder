@@ -70,6 +70,7 @@ li, a, p{
 }
 
 @media (max-width: 1000px){
+    
     .all{
         display: none;
     }
@@ -85,6 +86,7 @@ li, a, p{
 
     .burger{
         display: block;
+        z-index: 1000000;
     }
 }
 

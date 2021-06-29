@@ -9,16 +9,14 @@
     background-color: rgb(62, 44, 44);
     padding: 32px 16px;
     box-sizing: border-box;
-    transition: transform 0.3 ease-out;
     display: grid;
     place-items: center;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .SideDrawer img{
     height: 100px;
     width: 100px;
-    
 }
 
 .SideDrawer nav{
@@ -58,5 +56,5 @@
 }
 
 .Close{
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
