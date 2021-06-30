@@ -17,12 +17,8 @@ const toolbar = (props) => {
                 <p>Happy Eating!</p>
                 <SideDrawer/>
                 </header>
-                <div className = {classes.burgerDiv} onClick = {() => props.hamBurgerToggler()}>
-                    <div className={classes.burger}>
-                        <div className={classes.line1}></div>
-                        <div className={classes.line2}></div>
-                        <div className={classes.line3}></div>
-                    </div>
+                <div className={classes.burger} onClick = {() => props.hamBurgerToggler()}>
+                    <div  className={ props.stateToAimateHamburgerIcon ? null : classes.line}></div>
                 </div>
             </div>
         )

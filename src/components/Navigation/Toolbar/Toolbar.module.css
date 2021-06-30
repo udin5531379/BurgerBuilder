@@ -6,8 +6,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 2px 7%; /*top and left 30px and 10% on the bottom and right*/
-    position: fixed;
+    position:fixed;
+    background-color: seashell;
     width: 100%;
+    z-index: 20000;
 }
 
 .all img{
@@ -43,6 +45,7 @@ li, a, p{
 .nav__links li a{
     padding: 16px 10px;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
 .nav__links li:hover{
@@ -56,12 +59,12 @@ li, a, p{
     border-radius: 2500px;
 }
 
-.burger div{
+/* .burger div{
     width: 25px;
     height: 3px;
     background-color: black;
-    margin: 5px;;
-}
+    margin: 5px;
+} */
 
 @media (min-width: 1000px){
     .burger{
@@ -75,18 +78,45 @@ li, a, p{
         display: none;
     }
 
-    .burgerDiv{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-top: 20px;
-        top: 20px;
-        margin-right: 20px;
+    .burger{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        z-index: 1000000;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
     }
 
-    .burger{
-        display: block;
-        z-index: 1000000;
+    .line{
+        width: 25px;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 2px 5px rgb(135, 132, 132);
+        border-radius: 5px;
+        transition: all .5 ease-in-out;
+    }
+    .line:before,
+    .line:after{
+        content: ' ';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 2px 5px rgb(135, 132, 132);
+        margin: 5px;
+        transition: all .5 ease-in-out;
+    }
+
+    .line:before{
+        transform: translateY(-16px)
+    }
+
+    .line::after{
+        transform: translateY(8px)
     }
 }
 

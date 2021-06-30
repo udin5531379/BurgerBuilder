@@ -24,7 +24,7 @@ class Layout extends Component{
     render() {
         return(
             <Aux>
-                <Toolbar hamBurgerToggler = {this.sideBarToggler} />
+                <Toolbar hamBurgerToggler = {this.sideBarToggler} stateToAimateHamburgerIcon = {this.state.sideDrawerShow}/>
                 <SideDrawer open = {this.state.sideDrawerShow} modelStateHideFromLayoutComponent = {this.sideDrawerShowState}/>
                 <div className = {classes.Content}>
                     {this.props.children}
